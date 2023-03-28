@@ -2,11 +2,11 @@ FROM python:3.9
 
 RUN useradd -ms /bin/bash thepension
 
+WORKDIR /code
+
 RUN chown -R thepension:thepension /code
 
 USER thepension
-
-WORKDIR /code
 
 COPY ./setup.py /code/setup.py
 
