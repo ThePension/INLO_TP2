@@ -1,5 +1,9 @@
 FROM python:3.9
 
+RUN useradd -ms /bin/bash thepension
+
+USER thepension
+
 WORKDIR /code
 
 COPY ./setup.py /code/setup.py
