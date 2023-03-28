@@ -2,6 +2,8 @@ FROM python:3.9
 
 RUN useradd -ms /bin/bash thepension
 
+RUN chown -R thepension:thepension /code
+
 USER thepension
 
 WORKDIR /code
